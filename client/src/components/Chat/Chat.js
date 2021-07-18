@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import queryString from "query-string";
 import io from "socket.io-client";
 
+import './Chat.css';
+
+
 let socket;
 const ENDPOINT = "localhost:5000";
 
@@ -46,6 +49,7 @@ console.log(message,messages);
   return (
     <div className="outerContainer">
       <div className="container">
+        <InfoBar room = {room}/>
         <input
           value={message}
           onChange={(event) => setMessage(event.target.value)}
