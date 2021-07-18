@@ -27,6 +27,7 @@ socket.on('disconnect',()=>{
 });
 
 
+
 app.use(router);
 
-server.listen(PORT,()=>console.log('Server je zapoceo na portu ${PORT}'));
+server.listen(PORT,()=>console.log(`Server je zapoceo na portu ${PORT}`));
