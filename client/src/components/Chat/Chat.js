@@ -30,7 +30,7 @@ const Chat = ({ location }) => {
     return () => {
       socket.emit("izlaz");
 
-      socket.off();
+     // socket.off();
     };
   }, [location.search]);
 
@@ -38,7 +38,9 @@ const Chat = ({ location }) => {
     socket.on("message", (message) => {
       setMessages([...messages, message]);
     });
-  }, [messages]);
+
+
+  }, []);
 
   const sendMessage = (event) => {
     event.preventDefault();
@@ -54,7 +56,7 @@ console.log(message,messages);
       <div className="container">
         <InfoBar room = {room}/>
         
-        <Input message = {message} setMessage = {setMessage} sendMessage = {setMessage}/>
+        <Input message = {message} setMessage = {setMessage} sendMessage = {sendMessage}/>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ const express = require("express");
 const socketio = require("socket.io");
 const http = require("http");
 
-const { addUser, removeUser, getUser, getUsersInRoom } = require("./users.js");
+const { addUser, removeUser, getUser, getUsersInRoom } = require("./users");
 
 const PORT = process.env.PORT || 5000;
 
@@ -13,7 +13,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
-io.on("connection", (socket) => {
+io.on("connect", (socket) => {
   console.log("Uspostavljena konekcija");
 
   socket.on("join", ({ name, room }, callback) => {
