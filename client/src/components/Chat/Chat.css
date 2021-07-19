@@ -12,10 +12,30 @@
     justify-content: space-between;
     background: #FFFFFF;
     border-radius: 8px;
-    height: 60%;
+    height: 80%;
     width: 35%;
   }
   
+
+  .korisnici {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #332769;
+    border-radius: 8px;
+    height: 80%;
+    width: 20%;
+  }
+  .sobe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #692750;
+    border-radius: 8px;
+    height: 80%;
+    width: 20%;
+  }
+
   @media (min-width: 320px) and (max-width: 480px) {
     .outerContainer {
       height: 100%;
