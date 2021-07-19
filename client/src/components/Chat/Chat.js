@@ -66,7 +66,6 @@ console.log(message,messages,rooms,users);
 
     
     <div className="outerContainer">
-     <div className="sobe"> <RoomContainer rooms = {rooms}/></div>
 
       <div className="container">
         <InfoBar room = {room}/>

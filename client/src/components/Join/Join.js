@@ -4,33 +4,21 @@ import { Link } from "react-router-dom";
 import './Join.css';
 
 function Join() {
-  const [name, setName] = useState("");
-  const [room, setRoom] = useState("");
+  const room = "Global channel";
 
+
+  let val = Math.floor(Math.random() * 100000);
+  val = val.toString();
+const name = "user" + val;
   return (
     <div className="joinOuterContainer">
       <div className="joinInnerContainer">
-        <h1 className="heading">Join</h1>
-        <div>
-          <input
-            placeholder="Name"
-            className="joinInput"
-            type="text"
-            onChange={(event) => setName(event.target.value)}
-          />
-        </div>
-        <div>
-          <input
-            placeholder="Room"
-            className="joinInput mt-20"
-            type="text"
-            onChange={(event) => setRoom(event.target.value)}
-          />
-        </div>
+        <h1 className="heading">Nakon sto pristupite razgovoru bit ce vam dodijeljeno korisničko ime</h1>
+        
 
-        <Link onClick={event => (!name || !room) ? event.preventDefault():null} to={`/chat?name=${name}&room=${room}`}>
+        <Link  to={`/chat?name=${name}&room=${room}`}>
           <button className="button mt-20" type="submit">
-            Sign in
+            Join chat
           </button>
         </Link>
       </div>
