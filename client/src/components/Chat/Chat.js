@@ -37,7 +37,7 @@ const Chat = ({ location }) => {
     return () => {
       socket.emit("izlaz");
 
-     // socket.off();
+    socket.off();
     };
   }, [location.search]);
 
