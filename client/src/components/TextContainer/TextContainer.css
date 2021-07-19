@@ -4,6 +4,9 @@
     justify-content: space-between;
     height: 100%;
     width: 60%;
+    margin-left: 25%;
+    color: silver;
+
   }
   
   .activeContainer {
@@ -25,7 +28,7 @@
     margin-bottom: 0px;
   }
   
-  @media (min-width: 320px) and (max-width: 1200px) {
+  @media (min-width: 120px) and (max-width: 1200px) {
     .textContainer {
       display: none;
     }

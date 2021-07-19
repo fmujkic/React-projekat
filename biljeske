@@ -1,0 +1,17 @@
+Projekat rađen kao testni zadatak za firmu Evolt
+
+Ovo je chat aplikacija koja radi na globalnom nivou dakle
+svaki korisnik koji pristupi aplikaciji dobija username i pristupa
+globalnom kanalu.
+
+Problemi sa kojima sam se susretao su bili najvise vezani za sockete
+dakle kako rade i sta prenose prilikom slanja. Imao sam mnogo errora jer
+server i client nisu na istom portu pa sam morao skinuti ekstenziju na chrome
+koja je to rjesavala. 
+
+Dalje prvo sam bio napravio da korisnik pristupa sa svojim
+imenom ali zadatak je nalagao da ime bude dodijeljeno pa sam to promijenio.
+
+Takodjer pravio sam aplikaciju koja podrzava vise soba gdje korisnik moze birati u 
+koji chat room ce uci ali zbog manjka vremena nisam to stigao implementirati da radi 
+tako sto ce korisnik moci sam kreirati sobe.

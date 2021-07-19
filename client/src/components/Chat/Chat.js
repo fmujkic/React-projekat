@@ -8,7 +8,6 @@ import InfoBar from '../InfoBar/InfoBar.js'
 import Input from '../Input/Input.js'
 import Messages from '../Messages/Messages.js'
 import TextContainer from '../TextContainer/TextContainer.js'
-import RoomContainer from '../RoomContainer/RoomContainer.js'
 
 
 let socket;

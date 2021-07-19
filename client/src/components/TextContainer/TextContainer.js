@@ -1,31 +1,31 @@
-import React from 'react';
+import React from "react";
 
-import onlineIcon from '../../icons/onlineIcon.png';
+import { Link } from "react-router-dom";
 
-import './TextContainer.css';
+
+import onlineIcon from "../../icons/onlineIcon.png";
+
+import "./TextContainer.css";
 
 const TextContainer = ({ users }) => (
   <div className="textContainer">
-   
-    {
-      users
-        ? (
-          <div>
-            <h2>Aktivni korisnici:</h2>
-            <div className="activeContainer">
-              <h3>
-                {users.map(({name}) => (
-                  <div key={name} className="activeItem">
-                    {name}
-                    <img alt="Online Icon" src={onlineIcon}/>
-                  </div>
-                ))}
-              </h3>
-            </div>
-          </div>
-        )
-        : null
-    }
+    {users ? (
+      <div>
+        <h2>Aktivni korisnici:</h2>
+        <div className="activeContainer">
+          <h3>
+            {users.map(({ name }) => (
+              <Link to={`/chat?name=${name}&room=privatna_soba_korisnika_${name}`}>
+                <div key={name} className="activeItem">
+                  {name}
+                  <img alt="Online Icon" src={onlineIcon} />
+                </div>
+              </Link>
+            ))}
+          </h3>
+        </div>
+      </div>
+    ) : null}
   </div>
 );
 
